@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúl Díaz | Fotografía de Bodas de Autor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fuentes: Cormorant Garamond (Google) y Glacial Indifference (CDNFonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/glacial-indifference-2" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Glacial Indifference"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            primary: '#f8f7f3',    // Fondo claro
+                            secondary: '#2b2b2b',  // Textos y fondos oscuros
+                            tertiary: '#937b63',   // Acentos, botones, iconos
+                            tertiaryDark: '#7d6854' // Hover para botones
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        
+        /* Transición perfeccionada para testimonios */
+        .testimonial-fade {
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .testimonial-hidden {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        .testimonial-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-secondary antialiased bg-brand-primary selection:bg-brand-tertiary selection:text-brand-primary">
+
+    <!-- Marca / Logo -->
+    <div class="absolute top-10 left-0 right-0 flex justify-center z-50">
+        <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1752514553/logo-FE-fondonegro_bctsg7.png" alt="[Logo Saúl Díaz]" class="h-10 md:h-12 object-contain drop-shadow-md" />
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2000" alt="[Imagen de pareja de novios abrazados]" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-black/30"></div>
+        </div>
+        
+        <div class="relative z-10 flex flex-col items-center justify-end text-center px-4 w-full max-w-5xl mx-auto h-full pb-24 md:pb-32">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-serif text-brand-primary leading-tight mb-6 drop-shadow-md fade-in-up tracking-wide uppercase">
+                MÁS QUE FOTO, VIAJE EMOCIONAL
+            </h1>
+            <p class="text-base sm:text-lg lg:text-xl font-light text-brand-primary/90 max-w-3xl mx-auto mb-10 drop-shadow-sm delay-100 fade-in-up tracking-wider leading-relaxed">
+                Cada foto está pensada para eso: que te detengas, la veas, y algo se active en ti. Una emoción, una memoria, un golpecito en el pecho.
+            </p>
+            <div class="delay-200 fade-in-up">
+                <a href="#reserva" class="inline-flex items-center justify-center px-10 py-4 border border-brand-primary text-xs font-bold text-brand-primary bg-transparent hover:bg-brand-primary hover:text-brand-secondary transition-all duration-500 tracking-[0.2em] uppercase backdrop-blur-sm">
+                    QUIERO REVIVIR MI BODA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mensaje Principal Section (Estilo Editorial) -->
+    <section class="py-24 md:py-32 bg-brand-primary border-b border-brand-tertiary/10 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Foto Izquierda -->
+                <div class="md:col-span-3 mt-8 md:mt-40 fade-in-up delay-100">
+                    <div class="aspect-[4/5] bg-brand-tertiary/10 overflow-hidden shadow-sm">
+                        <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1764016418/m_i_-_web_42_egrpli.jpg" alt="[Imagen de detalle de boda m_i]" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition duration-700">
+                    </div>
+                </div>
+
+                <!-- Texto Central -->
+                <div class="md:col-span-6 flex flex-col items-center text-center px-2 md:px-6 fade-in-up z-10 py-12 md:py-0">
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif text-brand-tertiary leading-snug mb-8 tracking-wide uppercase">
+                        EL MIEDO A QUE TODO PASE DEMASIADO RÁPIDO
+                    </h2>
+                    
+                    <p class="text-sm sm:text-base font-light text-brand-secondary/70 leading-relaxed mb-12 max-w-md mx-auto">
+                        Muchas novias tienen el mismo miedo: que el día de su boda pase volando y los recuerdos se queden a medias. Es la preocupación constante de elegir mal al fotógrafo, porque duele pensar que, al final de todo el esfuerzo, las imágenes no logren transmitir la <strong class="font-bold text-brand-secondary">emoción real</strong> que vivieron en su gran día.
+                    </p>
+
+                    <a href="#reserva" class="inline-flex items-center justify-center px-8 py-3 border border-brand-tertiary text-[0.70rem] font-bold text-brand-tertiary bg-transparent hover:bg-brand-tertiary hover:text-brand-primary transition-all duration-500 tracking-[0.2em] uppercase">
+                        QUIERO REVIVIR MI BODA
+                    </a>
+                </div>
+
+                <!-- Foto Derecha -->
+                <div class="md:col-span-3 mb-8 md:mb-40 fade-in-up delay-200 hidden md:block">
+                    <div class="aspect-square bg-brand-tertiary/10 overflow-hidden shadow-sm">
+                        <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1761847526/boda-s_b-191_zbvxma.jpg" alt="[Imagen de boda s_b]" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition duration-700">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso Section (Estilo Editorial) -->
+    <section id="proceso" class="py-24 md:py-32 bg-brand-primary border-b border-brand-tertiary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Texto (Izquierda) -->
+                <div class="lg:col-span-5 fade-in-up">
+                    <p class="text-brand-tertiary text-[0.65rem] sm:text-xs tracking-[0.3em] uppercase mb-6 font-bold">El proceso...</p>
+                    
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif text-brand-tertiary leading-tight mb-8 tracking-wide uppercase">
+                        PARA TU PAZ MENTAL
+                    </h2>
+                    
+                    <div class="space-y-4 text-sm sm:text-base font-light text-brand-secondary/80 leading-relaxed mb-10 text-left">
+                        <p><strong class="font-bold text-brand-tertiary">1. Fase de conexión:</strong> Un espacio para profundizar en su relación, cómo se conocieron, sus gustos y cómo son como pareja. Esto permite ayudarles a decidir el paquete ideal para su gran día.</p>
+                        <p><strong class="font-bold text-brand-tertiary">2. Sesión previa:</strong> Su ensayo emocional para soltar los nervios, perder el miedo a la cámara y simplemente disfrutar el momento.</p>
+                        <p><strong class="font-bold text-brand-tertiary">3. El gran día:</strong> Un acompañamiento invisible. Todo se resuelve de forma discreta para que solo se concentren en vivir su burbuja emocional.</p>
+                        <p><strong class="font-bold text-brand-tertiary">4. La entrega:</strong> Sus recuerdos convertidos en una galería profesional, diseñada para que puedan revivir su historia eternamente.</p>
+                    </div>
+
+                    <a href="#reserva" class="inline-flex items-center justify-center px-8 py-3 border border-brand-tertiary text-[0.70rem] font-bold text-brand-tertiary bg-transparent hover:bg-brand-tertiary hover:text-brand-primary transition-all duration-500 tracking-[0.2em] uppercase mt-2">
+                        QUIERO REVIVIR MI BODA
+                    </a>
+                </div>
+
+                <!-- Galería de 2 Fotos (Derecha) -->
+                <div class="lg:col-span-7 grid grid-cols-2 gap-4 fade-in-up delay-200">
+                    <div class="aspect-[2/3] overflow-hidden bg-brand-tertiary/10 shadow-sm">
+                        <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1764016256/boda-a_a-119_rhohn6.jpg" alt="[Imagen de boda momento emotivo]" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                    </div>
+                    <div class="aspect-[2/3] overflow-hidden bg-brand-tertiary/10 shadow-sm">
+                        <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1764016415/m_i_-_web_28_tuqo63.jpg" alt="[Imagen de novios sesión]" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Promesa Section -->
+    <section id="promesa" class="py-24 bg-brand-secondary text-brand-primary relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-brand-tertiary rounded-full opacity-10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-brand-tertiary rounded-full opacity-10 blur-3xl"></div>
+        
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-serif font-bold text-brand-primary sm:text-4xl mb-6 uppercase">DE SOLTAR EL CONTROL A DISFRUTAR PLENAMENTE</h2>
+                    <p class="text-xl text-brand-primary/80 mb-6 leading-relaxed">
+                        Pasas de ser una novia que intenta controlar cada segundo por miedo al olvido, a ser una mujer que puede soltar el control y disfrutar plenamente de su boda.
+                    </p>
+                    <p class="text-xl text-brand-primary/90 leading-relaxed font-serif italic border-l-4 border-brand-tertiary pl-6">
+                        "Compras la seguridad de que, en 20 años, podrás cerrar los ojos frente a una foto y volver a sentir el nudo en la garganta de ese día."
+                    </p>
+                </div>
+                <div class="relative h-96 rounded-lg overflow-hidden shadow-2xl border border-brand-tertiary/20">
+                    <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1764016259/boda-a_a-327_camil7.jpg" alt="[Imagen de novios felices]" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios (Estilo Editorial Minimalista con Lógica de Carrusel) -->
+    <section class="py-24 md:py-32 bg-brand-primary relative overflow-hidden flex flex-col items-center justify-center border-t border-brand-tertiary/10 min-h-[500px]">
+        
+        <div id="testimonial-container" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 testimonial-fade testimonial-visible">
+            <h3 id="testimonial-quote" class="text-2xl md:text-3xl lg:text-4xl font-serif text-brand-tertiary italic mb-8 leading-snug px-4 md:px-12 uppercase">
+                <!-- Cita -->
+            </h3>
+            
+            <p id="testimonial-text" class="text-sm md:text-base font-light text-brand-secondary/80 leading-relaxed mb-12 max-w-2xl mx-auto min-h-[80px]">
+                <!-- Texto largo -->
+            </p>
+            
+            <p id="testimonial-author" class="text-[0.65rem] sm:text-xs tracking-[0.3em] font-bold text-brand-tertiary uppercase mb-16">
+                <!-- Autores -->
+            </p>
+            
+            <div class="flex items-center justify-center w-full max-w-sm mx-auto">
+                <button onclick="prevTestimonial()" class="text-brand-tertiary/40 hover:text-brand-tertiary transition-all px-4 cursor-pointer">
+                    <i class="ph ph-arrow-left text-xl"></i>
+                </button>
+                <div class="h-[1px] bg-brand-tertiary/20 flex-grow mx-4"></div>
+                <button onclick="nextTestimonial()" class="text-brand-tertiary/40 hover:text-brand-tertiary transition-all px-4 cursor-pointer">
+                    <i class="ph ph-arrow-right text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfil Section -->
+    <section id="perfil" class="py-24 bg-brand-secondary text-brand-primary">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3">
+                    <div class="aspect-[4/5] overflow-hidden shadow-2xl">
+                        <img src="https://res.cloudinary.com/drrhn6t1c/image/upload/v1778284819/IMG_3141_vwfk2w.jpg" alt="[Retrato de Saúl Díaz]" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-10 text-left">
+                    <h2 class="text-4xl font-serif font-bold mb-6 text-brand-primary uppercase">HOLA, SOY SAÚL DÍAZ</h2>
+                    <p class="text-xl text-brand-primary/80 mb-6 leading-relaxed">
+                        Y quiero ser muy honesto contigo: <strong class="text-brand-primary font-bold">no estoy ahí solo para hacer fotos bonitas.</strong>
+                    </p>
+                    <p class="text-xl text-brand-primary/80 mb-6 leading-relaxed">
+                        El propósito es ayudarte a que tengas seguridad y tranquilidad de que podrás revivir el día de tu boda una y otra vez.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Final -->
+    <section id="reserva" class="py-24 bg-brand-primary text-center relative">
+        <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-serif font-bold text-brand-secondary mb-6 uppercase">EMPIEZA A REVIVIR TU BODA</h2>
+            <div class="inline-flex items-center justify-center space-x-3 bg-white border border-brand-tertiary/30 rounded-full px-5 py-2 mb-8 shadow-sm">
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-tertiary opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-tertiary"></span>
+                </span>
+                <p class="text-brand-secondary text-sm font-bold tracking-widest uppercase">Solo aceptamos 25 bodas al año</p>
+            </div>
+            <p class="text-xl text-brand-secondary/80 mb-12 leading-relaxed">
+                Limitamos nuestras coberturas para garantizar la mejor calidad para cada boda.
+            </p>
+            
+            <button onclick="openModal()" class="inline-block mt-4 bg-brand-tertiary text-brand-primary font-bold py-4 px-10 rounded-sm hover:bg-brand-tertiaryDark transition-colors duration-300 tracking-widest uppercase shadow-md">
+                QUIERO REVIVIR MI BODA
+            </button>
+        </div>
+    </section>
+
+    <!-- Modal Formulario -->
+    <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+        <div class="absolute inset-0 bg-brand-secondary/90 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+        <div class="relative bg-brand-primary p-8 md:p-10 w-full max-w-lg mx-4 border-t-4 border-brand-tertiary shadow-2xl z-10 rounded-sm">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-brand-secondary/40 hover:text-brand-secondary transition-colors">
+                <i class="ph ph-x text-2xl"></i>
+            </button>
+            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-brand-secondary mb-4 text-center tracking-wide leading-snug uppercase">Estás a un clic de revivir el día de tu boda.</h3>
+            <p class="text-brand-secondary/80 text-sm sm:text-base text-center mb-8 font-medium">Antes de abrir WhatsApp, queremos ser 100% honestos con ustedes:</p>
+            <div class="space-y-6 text-left mb-8">
+                <div class="flex items-start">
+                    <i class="ph-fill ph-file-pdf text-brand-tertiary text-xl mt-1 mr-4 flex-shrink-0"></i>
+                    <p class="text-sm text-brand-secondary/80 leading-relaxed">
+                        <strong class="font-bold text-brand-secondary uppercase text-[0.8rem] tracking-wider block mb-1">No enviamos PDFs genéricos:</strong> 
+                        Creemos que su boda merece un trato personalizado, por eso no enviamos paquetes o lista de precios por mensaje.
+                    </p>
+                </div>
+                <div class="flex items-start">
+                    <i class="ph-fill ph-hourglass-high text-brand-tertiary text-xl mt-1 mr-4 flex-shrink-0"></i>
+                    <p class="text-sm text-brand-secondary/80 leading-relaxed">
+                        <strong class="font-bold text-brand-secondary uppercase text-[0.8rem] tracking-wider block mb-1">Somos transparentes con su tiempo:</strong> 
+                        Nuestro enfoque es exclusivo. Para no hacerlos perder el tiempo, les compartimos que la cobertura mínima es de 4h y los paquetes inician desde los $10,000 MXN.
+                    </p>
+                </div>
+                <div class="flex items-start">
+                    <i class="ph-fill ph-coffee text-brand-tertiary text-xl mt-1 mr-4 flex-shrink-0"></i>
+                    <p class="text-sm text-brand-secondary/80 leading-relaxed">
+                        <strong class="font-bold text-brand-secondary uppercase text-[0.8rem] tracking-wider block mb-1">El siguiente paso es conocernos:</strong> 
+                        Al hacer clic abajo, los invitaremos a agendar una videollamada (o ir por un cafecito) para platicar del día de su boda y ver si somos el equipo ideal para su gran día.
+                    </p>
+                </div>
+            </div>
+            
+            <a href="https://api.whatsapp.com/send?phone=+526643372791&text=Hola%20Sa%C3%BAl!%20Vimos%20la%20landing%20page%20y%20queremos%20revivir%20nuestra%20boda%20contigo.%20Estamos%20de%20acuerdo%20con%20el%20punto%20de%20partida%20de%20la%20inversi%C3%B3n%20y%20nos%20encantar%C3%ADa%20agendar%20una%20cita%20o%20el%20cafecito%20para%20platicar%20los%20detalles%20%E2%98%95%EF%B8%8F" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full mt-2 bg-brand-tertiary text-brand-primary font-bold py-4 px-4 rounded-sm hover:bg-brand-tertiaryDark transition-colors duration-300 tracking-widest uppercase shadow-md">
+                <i class="ph ph-whatsapp-logo text-2xl mr-2"></i> IR A WHATSAPP
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const testimonials = [
+            { quote: "¡Gracias por todo!!! Nos encantaron tus fotos.", text: "Estoy muy contenta con los recuerdos que creaste del día más bonito y más especial del inicio de nuestro 'felices por siempre'.", author: "Marlene & Irving" },
+            { quote: "Fuiste el fotógrafo de nuestros sueños.", text: "Gracias Saúl de verdad estas fotos hacen revivir cada escena de nuestra boda, así como fue la boda de nuestros sueños. Estamos agradecidos por tu trabajo, puntualidad y la manera en que nos comprendiste al dar amor a cada una de estas fotos.", author: "Yaneli & Omar" },
+            { quote: "Lograste inmortalizar y capturar nuestras emociones.", text: "No quería dejar pasar el agradecerte personalmente por todo tu trabajo el día de nuestra boda y por el resultado de nuestras fotos, nos encantaron !!! No te miento cuando las empecé a ver me dieron ganas de llorar, ver las fotos es como volver a vivirlo.", author: "Abigail & Alejandro" },
+            { quote: "Realmente estamos más que satisfechos.", text: "Queríamos agradecerte por tu gran trabajo, realmente estamos más que satisfechos con todo lo que hiciste por nosotros desde el día 1 que adquirimos el servicio, sin duda esperamos poder seguir utilizando tus servicios.", author: "Elena & Arturo" }
+        ];
+
+        let currentIdx = 0;
+
+        function updateTestimonial(idx) {
+            const container = document.getElementById('testimonial-container');
+            const quoteEl = document.getElementById('testimonial-quote');
+            const textEl = document.getElementById('testimonial-text');
+            const authorEl = document.getElementById('testimonial-author');
+
+            container.classList.remove('testimonial-visible');
+            container.classList.add('testimonial-hidden');
+
+            setTimeout(() => {
+                quoteEl.textContent = `"${testimonials[idx].quote}"`;
+                textEl.textContent = testimonials[idx].text;
+                authorEl.textContent = testimonials[idx].author;
+                container.classList.remove('testimonial-hidden');
+                container.classList.add('testimonial-visible');
+            }, 600);
+        }
+
+        function nextTestimonial() { currentIdx = (currentIdx + 1) % testimonials.length; updateTestimonial(currentIdx); }
+        function prevTestimonial() { currentIdx = (currentIdx - 1 + testimonials.length) % testimonials.length; updateTestimonial(currentIdx); }
+
+        window.onload = () => { updateTestimonial(0); };
+        function openModal() { const modal = document.getElementById('contactModal'); modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.style.overflow = 'hidden'; }
+        function closeModal() { const modal = document.getElementById('contactModal'); modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow = 'auto'; }
+    </script>
+</body>
+</html>
