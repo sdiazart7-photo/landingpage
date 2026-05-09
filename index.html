@@ -60,6 +60,17 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Scrollbar personalizada para el modal */
+        #contactModal::-webkit-scrollbar {
+            width: 4px;
+        }
+        #contactModal::-webkit-scrollbar-track {
+            background: rgba(43, 43, 43, 0.1);
+        }
+        #contactModal::-webkit-scrollbar-thumb {
+            background: #937b63;
+        }
     </style>
 </head>
 <body class="font-sans text-brand-secondary antialiased bg-brand-primary selection:bg-brand-tertiary selection:text-brand-primary">
@@ -207,7 +218,7 @@
                 <!-- Autores -->
             </p>
             
-            <div class="flex items-center justify-center w-full max-w-sm mx-auto">
+            <div class="flex items-center justify-center w-full max-sm mx-auto">
                 <button onclick="prevTestimonial()" class="text-brand-tertiary/40 hover:text-brand-tertiary transition-all px-4 cursor-pointer">
                     <i class="ph ph-arrow-left text-xl"></i>
                 </button>
@@ -262,42 +273,51 @@
         </div>
     </section>
 
-    <!-- Modal Formulario -->
-    <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center">
-        <div class="absolute inset-0 bg-brand-secondary/90 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
-        <div class="relative bg-brand-primary p-8 md:p-10 w-full max-w-lg mx-4 border-t-4 border-brand-tertiary shadow-2xl z-10 rounded-sm">
-            <button onclick="closeModal()" class="absolute top-5 right-5 text-brand-secondary/40 hover:text-brand-secondary transition-colors">
-                <i class="ph ph-x text-2xl"></i>
-            </button>
-            <h3 class="text-2xl sm:text-3xl font-serif font-bold text-brand-secondary mb-4 text-center tracking-wide leading-snug uppercase">Estás a un clic de revivir el día de tu boda.</h3>
-            <p class="text-brand-secondary/80 text-sm sm:text-base text-center mb-8 font-medium">Antes de abrir WhatsApp, queremos ser 100% honestos con ustedes:</p>
-            <div class="space-y-6 text-left mb-8">
-                <div class="flex items-start">
-                    <i class="ph-fill ph-file-pdf text-brand-tertiary text-xl mt-1 mr-4 flex-shrink-0"></i>
-                    <p class="text-sm text-brand-secondary/80 leading-relaxed">
-                        <strong class="font-bold text-brand-secondary uppercase text-[0.8rem] tracking-wider block mb-1">No enviamos PDFs genéricos:</strong> 
-                        Creemos que su boda merece un trato personalizado, por eso no enviamos paquetes o lista de precios por mensaje.
-                    </p>
+    <!-- Modal Formulario (Corregido para Móviles) -->
+    <div id="contactModal" class="fixed inset-0 z-[100] hidden overflow-y-auto outline-none transition-all duration-300">
+        <!-- Overlay oscuro con blur -->
+        <div class="fixed inset-0 bg-brand-secondary/90 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+        
+        <!-- Contenedor del contenido que permite scroll -->
+        <div class="flex min-h-screen items-center justify-center p-4 sm:p-6 text-center">
+            <div class="relative bg-brand-primary p-6 md:p-10 w-full max-w-lg mx-auto border-t-4 border-brand-tertiary shadow-2xl z-10 rounded-sm transform transition-all text-left">
+                <!-- Botón Cerrar -->
+                <button onclick="closeModal()" class="absolute top-4 right-4 text-brand-secondary/40 hover:text-brand-secondary transition-colors z-20">
+                    <i class="ph ph-x text-2xl"></i>
+                </button>
+                
+                <h3 class="text-2xl sm:text-3xl font-serif font-bold text-brand-secondary mb-4 text-center tracking-wide leading-snug uppercase pt-2">Estás a un clic de revivir el día de tu boda.</h3>
+                
+                <p class="text-brand-secondary/80 text-sm sm:text-base text-center mb-8 font-medium">Antes de abrir WhatsApp, queremos ser 100% honestos con ustedes:</p>
+                
+                <div class="space-y-6 text-left mb-8">
+                    <div class="flex items-start">
+                        <i class="ph-fill ph-file-pdf text-brand-tertiary text-xl mt-1 mr-4 flex-shrink-0"></i>
+                        <p class="text-sm text-brand-secondary/80 leading-relaxed">
+                            <strong class="font-bold text-brand-secondary uppercase text-[0.8rem] tracking-wider block mb-1">No enviamos PDFs genéricos:</strong> 
+                            Creemos que su boda merece un trato personalizado, por eso no enviamos paquetes o lista de precios por mensaje.
+                        </p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="ph-fill ph-hourglass-high text-brand-tertiary text-xl mt-1 mr-4 flex-shrink-0"></i>
+                        <p class="text-sm text-brand-secondary/80 leading-relaxed">
+                            <strong class="font-bold text-brand-secondary uppercase text-[0.8rem] tracking-wider block mb-1">Somos transparentes con su tiempo:</strong> 
+                            Nuestro enfoque es exclusivo. Para no hacerlos perder el tiempo, les compartimos que la cobertura mínima es de 4h y los paquetes inician desde los $10,000 MXN.
+                        </p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="ph-fill ph-coffee text-brand-tertiary text-xl mt-1 mr-4 flex-shrink-0"></i>
+                        <p class="text-sm text-brand-secondary/80 leading-relaxed">
+                            <strong class="font-bold text-brand-secondary uppercase text-[0.8rem] tracking-wider block mb-1">El siguiente paso es conocernos:</strong> 
+                            Al hacer clic abajo, los invitaremos a agendar una videollamada (o ir por un cafecito) para platicar del día de su boda y ver si somos el equipo ideal para su gran día.
+                        </p>
+                    </div>
                 </div>
-                <div class="flex items-start">
-                    <i class="ph-fill ph-hourglass-high text-brand-tertiary text-xl mt-1 mr-4 flex-shrink-0"></i>
-                    <p class="text-sm text-brand-secondary/80 leading-relaxed">
-                        <strong class="font-bold text-brand-secondary uppercase text-[0.8rem] tracking-wider block mb-1">Somos transparentes con su tiempo:</strong> 
-                        Nuestro enfoque es exclusivo. Para no hacerlos perder el tiempo, les compartimos que la cobertura mínima es de 4h y los paquetes inician desde los $10,000 MXN.
-                    </p>
-                </div>
-                <div class="flex items-start">
-                    <i class="ph-fill ph-coffee text-brand-tertiary text-xl mt-1 mr-4 flex-shrink-0"></i>
-                    <p class="text-sm text-brand-secondary/80 leading-relaxed">
-                        <strong class="font-bold text-brand-secondary uppercase text-[0.8rem] tracking-wider block mb-1">El siguiente paso es conocernos:</strong> 
-                        Al hacer clic abajo, los invitaremos a agendar una videollamada (o ir por un cafecito) para platicar del día de su boda y ver si somos el equipo ideal para su gran día.
-                    </p>
-                </div>
+                
+                <a href="https://api.whatsapp.com/send?phone=+526643372791&text=Hola%20Sa%C3%BAl!%20Vimos%20la%20landing%20page%20y%20queremos%20revivir%20nuestra%20boda%20contigo.%20Estamos%20de%20acuerdo%20con%20el%20punto%20de%20partida%20de%20la%20inversi%C3%B3n%20y%20nos%20encantar%C3%ADa%20agendar%20una%20cita%20o%20el%20cafecito%20para%20platicar%20los%20detalles%20%E2%98%95%EF%B8%8F" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full mt-2 bg-brand-tertiary text-brand-primary font-bold py-4 px-4 rounded-sm hover:bg-brand-tertiaryDark transition-colors duration-300 tracking-widest uppercase shadow-md">
+                    <i class="ph ph-whatsapp-logo text-2xl mr-2"></i> IR A WHATSAPP
+                </a>
             </div>
-            
-            <a href="https://api.whatsapp.com/send?phone=+526643372791&text=Hola%20Sa%C3%BAl!%20Vimos%20la%20landing%20page%20y%20queremos%20revivir%20nuestra%20boda%20contigo.%20Estamos%20de%20acuerdo%20con%20el%20punto%20de%20partida%20de%20la%20inversi%C3%B3n%20y%20nos%20encantar%C3%ADa%20agendar%20una%20cita%20o%20el%20cafecito%20para%20platicar%20los%20detalles%20%E2%98%95%EF%B8%8F" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full mt-2 bg-brand-tertiary text-brand-primary font-bold py-4 px-4 rounded-sm hover:bg-brand-tertiaryDark transition-colors duration-300 tracking-widest uppercase shadow-md">
-                <i class="ph ph-whatsapp-logo text-2xl mr-2"></i> IR A WHATSAPP
-            </a>
         </div>
     </div>
 
@@ -333,8 +353,20 @@
         function prevTestimonial() { currentIdx = (currentIdx - 1 + testimonials.length) % testimonials.length; updateTestimonial(currentIdx); }
 
         window.onload = () => { updateTestimonial(0); };
-        function openModal() { const modal = document.getElementById('contactModal'); modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.style.overflow = 'hidden'; }
-        function closeModal() { const modal = document.getElementById('contactModal'); modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow = 'auto'; }
+
+        function openModal() { 
+            const modal = document.getElementById('contactModal'); 
+            modal.classList.remove('hidden'); 
+            modal.classList.add('flex'); 
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeModal() { 
+            const modal = document.getElementById('contactModal'); 
+            modal.classList.add('hidden'); 
+            modal.classList.remove('flex'); 
+            document.body.style.overflow = 'auto'; 
+        }
     </script>
 </body>
 </html>
