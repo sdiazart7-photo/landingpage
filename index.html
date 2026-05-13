@@ -3,36 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Finite estudio | Fotografía de bodas </title>
+    <title>Finite estudio | Fotografía de bodas</title>
 
-     <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1679547489851334');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1679547489851334&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1679547489851334');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1679547489851334&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     
     <script src="https://cdn.tailwindcss.com"></script>
 
-    
-    
     <!-- Fuentes: Cormorant Garamond (Google) y Glacial Indifference (CDNFonts) -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/glacial-indifference-2" rel="stylesheet">
     
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-      <script>
+    
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -52,6 +51,7 @@ src="https://www.facebook.com/tr?id=1679547489851334&ev=PageView&noscript=1"
             }
         }
     </script>
+    
     <style>
         html { scroll-behavior: smooth; }
         .fade-in-up {
@@ -127,7 +127,6 @@ src="https://www.facebook.com/tr?id=1679547489851334&ev=PageView&noscript=1"
     <section class="py-24 md:py-32 bg-brand-primary border-b border-brand-tertiary/10 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center">
-                
                 <!-- Foto Izquierda -->
                 <div class="md:col-span-3 mt-8 md:mt-40 fade-in-up delay-100">
                     <div class="aspect-[4/5] bg-brand-tertiary/10 overflow-hidden shadow-sm">
@@ -165,7 +164,6 @@ src="https://www.facebook.com/tr?id=1679547489851334&ev=PageView&noscript=1"
     <section id="proceso" class="py-24 md:py-32 bg-brand-primary border-b border-brand-tertiary/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-                
                 <!-- Texto (Izquierda) -->
                 <div class="lg:col-span-5 fade-in-up">
                     <p class="text-brand-tertiary text-[0.65rem] sm:text-xs tracking-[0.3em] uppercase mb-6 font-bold">El proceso...</p>
@@ -223,9 +221,8 @@ src="https://www.facebook.com/tr?id=1679547489851334&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- Testimonios (Estilo Editorial Minimalista con Lógica de Carrusel) -->
+    <!-- Testimonios Section -->
     <section class="py-24 md:py-32 bg-brand-primary relative overflow-hidden flex flex-col items-center justify-center border-t border-brand-tertiary/10 min-h-[500px]">
-        
         <div id="testimonial-container" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 testimonial-fade testimonial-visible">
             <h3 id="testimonial-quote" class="text-2xl md:text-3xl lg:text-4xl font-serif text-brand-tertiary italic mb-8 leading-snug px-4 md:px-12 uppercase">
                 <!-- Cita -->
@@ -294,13 +291,14 @@ src="https://www.facebook.com/tr?id=1679547489851334&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <!-- Modal Formulario (Corregido para Móviles) -->
+    <!-- Modal Formulario (CORREGIDO PARA PC Y MÓVIL) -->
     <div id="contactModal" class="fixed inset-0 z-[100] hidden overflow-y-auto outline-none transition-all duration-300">
         <!-- Overlay oscuro con blur -->
         <div class="fixed inset-0 bg-brand-secondary/90 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
         
-        <!-- Contenedor del contenido que permite scroll -->
-        <div class="flex min-h-screen items-center justify-center p-4 sm:p-6 text-center">
+        <!-- Contenedor Flex: Esta es la pieza clave para el centrado perfecto -->
+        <div class="flex min-h-full items-center justify-center p-4 sm:p-6 md:p-12">
+            <!-- Contenido del Modal -->
             <div class="relative bg-brand-primary p-6 md:p-10 w-full max-w-lg mx-auto border-t-4 border-brand-tertiary shadow-2xl z-10 rounded-sm transform transition-all text-left">
                 <!-- Botón Cerrar -->
                 <button onclick="closeModal()" class="absolute top-4 right-4 text-brand-secondary/40 hover:text-brand-secondary transition-colors z-20">
@@ -378,14 +376,14 @@ src="https://www.facebook.com/tr?id=1679547489851334&ev=PageView&noscript=1"
         function openModal() { 
             const modal = document.getElementById('contactModal'); 
             modal.classList.remove('hidden'); 
-            modal.classList.add('flex'); 
+            modal.classList.add('block'); // Cambiado a block para que el overflow-y funcione bien
             document.body.style.overflow = 'hidden'; 
         }
 
         function closeModal() { 
             const modal = document.getElementById('contactModal'); 
             modal.classList.add('hidden'); 
-            modal.classList.remove('flex'); 
+            modal.classList.remove('block'); 
             document.body.style.overflow = 'auto'; 
         }
     </script>
